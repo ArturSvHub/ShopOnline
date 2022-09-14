@@ -11,5 +11,6 @@ namespace ShopOnline.Services.Web.Contracts
     public interface IProductService
     {
         Task<IEnumerable<ProductDTO>> GetProducts();
+        Task<ProductDTO> GetProductById(int id);
     }
 }

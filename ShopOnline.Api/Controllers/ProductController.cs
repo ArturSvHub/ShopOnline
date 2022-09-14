@@ -40,5 +40,28 @@ namespace ShopOnline.Api.Controllers
                     "Что то не так с базой данных");
             }
         }
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<ProductDTO>> GetProduct(int id)
+        {
+            try
+            {
+                var product = await _repository.GetProduct(id);
+                if (product == null)
+                {
+                    return BadRequest();
+                }
+                else
+                {
+                    var category = await _repository.GetCategory(product.CategoryId.GetValueOrDefault());
+                    var productDTO = product.ConvertToDTO(category);
+                    return Ok(productDTO);
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Что то не так...");
+            }
+        }
     }
 }

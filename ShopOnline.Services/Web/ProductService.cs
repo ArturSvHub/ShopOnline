@@ -18,13 +18,51 @@ namespace ShopOnline.Services.Web
         {
             this.httpClient = httpClient;
         }
+
+        public async Task<ProductDTO> GetProductById(int id)
+        {
+            try
+            {
+                var response = await httpClient.GetAsync($"api/Product/{id}");
+                if(response.IsSuccessStatusCode)
+                {
+                    if(response.StatusCode==System.Net.HttpStatusCode.NoContent)
+                    {
+                        return default(ProductDTO);
+                    }
+                    return await response.Content.ReadFromJsonAsync<ProductDTO>();
+                }
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception(message);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<ProductDTO>> GetProducts()
         {
             try
             {
-                var products = await httpClient
-                    .GetFromJsonAsync<IEnumerable<ProductDTO>>("api/Product");
-                return products;
+                var response = await httpClient.GetAsync("api/Product");
+                if(response.IsSuccessStatusCode)
+                {
+                    if(response.StatusCode==System.Net.HttpStatusCode.NoContent)
+                    {
+                        return Enumerable.Empty<ProductDTO>();
+                    }
+                    return await response.Content.ReadFromJsonAsync<IEnumerable<ProductDTO>>();
+                }
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception(message);
+                }
             }
             catch (Exception)
             {
