@@ -9,6 +9,7 @@ namespace ShopOnline.Web.Pages
     {
         [Parameter]
         public int Id { get; set; }
+        [Inject]
         public IProductService ProductService { get; set; }
         public ProductDTO? Product { get; set; }
         public string ErrorMessage { get; set; }

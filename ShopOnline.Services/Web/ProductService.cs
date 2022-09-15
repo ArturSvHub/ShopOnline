@@ -23,7 +23,7 @@ namespace ShopOnline.Services.Web
         {
             try
             {
-                var response = await httpClient.GetAsync($"api/Product/{id}");
+                var response = await httpClient.GetAsync($"api/product/{id}");
                 if(response.IsSuccessStatusCode)
                 {
                     if(response.StatusCode==System.Net.HttpStatusCode.NoContent)
