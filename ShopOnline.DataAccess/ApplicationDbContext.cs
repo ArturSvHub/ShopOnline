@@ -18,8 +18,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 1,
-                Name = "Glossier - Beauty Kit",
-                Description = "A kit provided by Glossier, containing skin care, hair care and makeup products",
+                Name = "Glossier - Косметический набор",
+                Description = "Набор от Glossier, содержащий средства по уходу за кожей, волосами и другую косметику",
                 ImageURL = "/Images/Beauty/Beauty1.png",
                 RetailPrice = 100,
                 Count = 100,
@@ -29,8 +29,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 2,
-                Name = "Curology - Skin Care Kit",
-                Description = "A kit provided by Curology, containing skin care products",
+                Name = "Curology - Набор ухода за кожей",
+                Description = "Набор, предоставленный Curology, содержащий средства по уходу за кожей",
                 ImageURL = "/Images/Beauty/Beauty2.png",
                 RetailPrice = 50,
                 Count = 45,
@@ -40,8 +40,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 3,
-                Name = "Cocooil - Organic Coconut Oil",
-                Description = "A kit provided by Curology, containing skin care products",
+                Name = "Cocooil - Органическое Кокосовое масло",
+                Description = "Набор, предоставленный Curology, содержащий средства по уходу за кожей",
                 ImageURL = "/Images/Beauty/Beauty3.png",
                 RetailPrice = 20,
                 Count = 30,
@@ -51,8 +51,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 4,
-                Name = "Schwarzkopf - Hair Care and Skin Care Kit",
-                Description = "A kit provided by Schwarzkopf, containing skin care and hair care products",
+                Name = "Schwarzkopf - Набор для ухода за волосами и кожей",
+                Description = "Набор от Schwarzkopf, содержащий средства по уходу за кожей и волосами",
                 ImageURL = "/Images/Beauty/Beauty4.png",
                 RetailPrice = 50,
                 Count = 60,
@@ -62,8 +62,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 5,
-                Name = "Skin Care Kit",
-                Description = "Skin Care Kit, containing skin care and hair care products",
+                Name = "Набор для ухода за кожей",
+                Description = "Набор для ухода за кожей, содержащий средства по уходу за кожей и волосами",
                 ImageURL = "/Images/Beauty/Beauty5.png",
                 RetailPrice = 30,
                 Count = 85,
@@ -75,7 +75,7 @@ namespace ShopOnline.DataAccess
             {
                 Id = 6,
                 Name = "Air Pods",
-                Description = "Air Pods - in-ear wireless headphones",
+                Description = "Air Pods - знаменитые беспроводные наушники-вкладыши от яблочной компании",
                 ImageURL = "/Images/Electronic/Electronics1.png",
                 RetailPrice = 100,
                 Count = 120,
@@ -85,8 +85,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 7,
-                Name = "On-ear Golden Headphones",
-                Description = "On-ear Golden Headphones - these headphones are not wireless",
+                Name = "Наушники On-ear Golden",
+                Description = "Наушники On-ear Golden - эти наушники не являются беспроводными",
                 ImageURL = "/Images/Electronic/Electronics2.png",
                 RetailPrice = 40,
                 Count = 200,
@@ -96,8 +96,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 8,
-                Name = "On-ear Black Headphones",
-                Description = "On-ear Black Headphones - these headphones are not wireless",
+                Name = "Наушники On-ear Black",
+                Description = "Наушники On-ear Black - эти наушники не являются беспроводными",
                 ImageURL = "/Images/Electronic/Electronics3.png",
                 RetailPrice = 40,
                 Count = 300,
@@ -107,8 +107,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 9,
-                Name = "Sennheiser Digital Camera with Tripod",
-                Description = "Sennheiser Digital Camera - High quality digital camera provided by Sennheiser - includes tripod",
+                Name = "Sennheiser Цифровая камера со штативом",
+                Description = "Sennheiser Цифровая камера - Высококачественная цифровая камера от Sennheiser - включает в себя штатив",
                 ImageURL = "/Images/Electronic/Electronic4.png",
                 RetailPrice = 600,
                 Count = 20,
@@ -118,8 +118,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 10,
-                Name = "Canon Digital Camera",
-                Description = "Canon Digital Camera - High quality digital camera provided by Canon",
+                Name = "Цифровая камера Canon",
+                Description = "Цифровая камера Canon - Высококачественная цифровая камера, предоставляемая компанией Canon",
                 ImageURL = "/Images/Electronic/Electronic5.png",
                 RetailPrice = 500,
                 Count = 15,
@@ -130,7 +130,7 @@ namespace ShopOnline.DataAccess
             {
                 Id = 11,
                 Name = "Nintendo Gameboy",
-                Description = "Gameboy - Provided by Nintendo",
+                Description = "Gameboy - Предоставлено Nintendo",
                 ImageURL = "/Images/Electronic/technology6.png",
                 RetailPrice = 100,
                 Count = 60,
@@ -140,8 +140,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 12,
-                Name = "Black Leather Office Chair",
-                Description = "Very comfortable black leather office chair",
+                Name = "Офисное Кресло Из Черной Кожи",
+                Description = "Очень удобное офисное кресло из черной кожи",
                 ImageURL = "/Images/Furniture/Furniture1.png",
                 RetailPrice = 50,
                 Count = 212,
@@ -151,8 +151,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 13,
-                Name = "Pink Leather Office Chair",
-                Description = "Very comfortable pink leather office chair",
+                Name = "Розовое Кожаное Офисное Кресло",
+                Description = "Очень удобное офисное кресло из розовой кожи",
                 ImageURL = "/Images/Furniture/Furniture2.png",
                 RetailPrice = 50,
                 Count = 112,
@@ -161,8 +161,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 14,
-                Name = "Lounge Chair",
-                Description = "Very comfortable lounge chair",
+                Name = "Кресло для отдыха",
+                Description = "Очень удобное кресло для отдыха",
                 ImageURL = "/Images/Furniture/Furniture3.png",
                 RetailPrice = 70,
                 Count = 90,
@@ -171,8 +171,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 15,
-                Name = "Silver Lounge Chair",
-                Description = "Very comfortable Silver lounge chair",
+                Name = "Серое Кресло Для Отдыха",
+                Description = "Очень удобное серое кресло для отдыха",
                 ImageURL = "/Images/Furniture/Furniture4.png",
                 RetailPrice = 120,
                 Count = 95,
@@ -181,8 +181,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 16,
-                Name = "Porcelain Table Lamp",
-                Description = "White and blue Porcelain Table Lamp",
+                Name = "Фарфоровая настольная Лампа",
+                Description = "Бело-голубая фарфоровая настольная лампа",
                 ImageURL = "/Images/Furniture/Furniture6.png",
                 RetailPrice = 15,
                 Count = 100,
@@ -191,8 +191,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 17,
-                Name = "Office Table Lamp",
-                Description = "Office Table Lamp",
+                Name = "Офисная Настольная Лампа",
+                Description = "Офисная Настольная Лампа",
                 ImageURL = "/Images/Furniture/Furniture7.png",
                 RetailPrice = 20,
                 Count = 73,
@@ -202,8 +202,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 18,
-                Name = "Puma Sneakers",
-                Description = "Comfortable Puma Sneakers in most sizes",
+                Name = "Кроссовки Puma",
+                Description = "Удобные кроссовки Puma большинства размеров",
                 ImageURL = "/Images/Shoes/Shoes1.png",
                 RetailPrice = 100,
                 Count = 50,
@@ -212,8 +212,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 19,
-                Name = "Colorful Trainers",
-                Description = "Colorful trainsers - available in most sizes",
+                Name = "Разноцветные кеды",
+                Description = "Разноцветные кеды - доступны в большинстве размеров",
                 ImageURL = "/Images/Shoes/Shoes2.png",
                 RetailPrice = 150,
                 Count = 60,
@@ -222,8 +222,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 20,
-                Name = "Blue Nike Trainers",
-                Description = "Blue Nike Trainers - available in most sizes",
+                Name = "Синие кроссовки Nike",
+                Description = "Синие кроссовки Nike - доступны в большинстве размеров",
                 ImageURL = "/Images/Shoes/Shoes3.png",
                 RetailPrice = 200,
                 Count = 70,
@@ -232,8 +232,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 21,
-                Name = "Colorful Hummel Trainers",
-                Description = "Colorful Hummel Trainers - available in most sizes",
+                Name = "Разноцветные кеды Hummel",
+                Description = "Разноцветные кеды Hummel - доступны в большинстве размеров",
                 ImageURL = "/Images/Shoes/Shoes4.png",
                 RetailPrice = 120,
                 Count = 120,
@@ -242,8 +242,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 22,
-                Name = "Red Nike Trainers",
-                Description = "Red Nike Trainers - available in most sizes",
+                Name = "Красные кроссовки Nike",
+                Description = "Красные кроссовки Nike - доступны в большинстве размеров",
                 ImageURL = "/Images/Shoes/Shoes5.png",
                 RetailPrice = 200,
                 Count = 100,
@@ -252,8 +252,8 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 Id = 23,
-                Name = "Birkenstock Sandles",
-                Description = "Birkenstock Sandles - available in most sizes",
+                Name = "Сандали Birkenstock",
+                Description = "Сандали Birkenstock - доступны в большинстве размеров",
                 ImageURL = "/Images/Shoes/Shoes6.png",
                 RetailPrice = 50,
                 Count = 150,
@@ -264,13 +264,13 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<User>().HasData(new User
             {
                 Id = 1,
-                UserName = "Bob"
+                UserName = "Владимир"
 
             });
             modelBuilder.Entity<User>().HasData(new User
             {
                 Id = 2,
-                UserName = "Sarah"
+                UserName = "Светлана"
 
             });
 
@@ -291,25 +291,25 @@ namespace ShopOnline.DataAccess
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = 1,
-                Name = "Beauty",
+                Name = "Косметика",
                 IconCSS = "fas fa-spa"
             });
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = 2,
-                Name = "Furniture",
+                Name = "Мебель",
                 IconCSS = "fas fa-couch"
             });
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = 3,
-                Name = "Electronics",
+                Name = "Электроника",
                 IconCSS = "fas fa-headphones"
             });
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = 4,
-                Name = "Shoes",
+                Name = "Обувь",
                 IconCSS = "fas fa-shoe-prints"
             });
 

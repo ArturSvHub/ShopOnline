@@ -1,0 +1,56 @@
+﻿@page "/cart"
+
+
+@if(CartItems==null&&ErrorMessage==null)
+{
+    <Loading/>
+}
+else if(ErrorMessage!=null)
+{
+    <DisplayError ErrorMessage="@ErrorMessage"/>
+}
+else
+{
+    <h3 class="mb-5">Корзина</h3>
+    @if(CartItems.Count()>0)
+    {
+        <div class="row mb-5">
+            <div class="col-md-9">
+                @foreach (var item in CartItems)
+                {
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <img src="@item.ProductImageURL" width="300" class="img-thumbnail" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>@item.ProductName</h5>
+                            <div class="mb-4">@item.ProductDescription</div>
+                            <span>Цена: <b>@item.RetailPrice!.Value.ToString("C",CultureInfo.CreateSpecificCulture("ru-RU"))</b></span>
+                            <input type="number" @bind-value="@item.Count" @bind-value:event="oninput" 
+                            @onchange=@(()=>UpdateCountCartItem(item.Id,item.Count.GetValueOrDefault()))/>
+                            <span>@item.Count</span>
+                            <button @onclick="(()=>DeleteCartItem(item.Id))"
+                        class="btn btn-danger sm">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3">
+                <h5>
+                    Подитог
+                </h5>
+                <div class="mt-2">
+                    <div>Итого - (@TotalCount шт.)&nbsp;<b>@TotalPrice.Value.ToString("C",CultureInfo.CreateSpecificCulture("ru-RU"))</b></div>
+                    <a href="#" class="btn btn-success">
+                        <span class="oi oi-credit-card"></span>&nbsp; Оплата
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+    else{
+        <h4>Корзина пуста...</h4>
+    }
+}

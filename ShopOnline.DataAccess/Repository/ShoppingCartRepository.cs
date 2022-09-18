@@ -48,9 +48,15 @@ namespace ShopOnline.DataAccess.Repository
             return null;
         }
 
-        public Task<CartItem> DeleteItem(int id)
+        public async Task<CartItem> DeleteItem(int id)
         {
-            throw new NotImplementedException();
+            var item = await context.CartItems.FirstOrDefaultAsync(x => x.Id == id);
+            if(item != null)
+            {
+                context.CartItems.Remove(item);
+                await context.SaveChangesAsync();
+            }
+            return item;
         }
 
         public async Task<CartItem> GetItem(int id)
@@ -72,7 +78,7 @@ namespace ShopOnline.DataAccess.Repository
         {
             return await (from cart in context.Carts
                           join cartItem in context.CartItems
-                          on cart.Id equals cartItem.Id
+                          on cart.Id equals cartItem.CartId
                           where cart.UserId == userId
                           select new CartItem
                           {
@@ -83,9 +89,16 @@ namespace ShopOnline.DataAccess.Repository
                           }).ToListAsync();
         }
 
-        public Task<CartItem> UpdateCount(int id, CartItemCountUpdateDTO cartItemCountUpdateDTO)
+        public async Task<CartItem> UpdateCount(int id, CartItemCountUpdateDTO cartItemCountUpdateDTO)
         {
-            throw new NotImplementedException();
+            var item = await context.CartItems.FirstOrDefaultAsync(i => i.Id == id);
+            if(item != null)
+            {
+                item.Count = cartItemCountUpdateDTO.Count;
+                await context.SaveChangesAsync();
+                return item;
+            }
+            return null;
         }
     }
 }

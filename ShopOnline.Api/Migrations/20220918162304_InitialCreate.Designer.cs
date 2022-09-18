@@ -12,7 +12,7 @@ using ShopOnline.DataAccess;
 namespace ShopOnline.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220913105837_InitialCreate")]
+    [Migration("20220918162304_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -101,25 +101,25 @@ namespace ShopOnline.Api.Migrations
                         {
                             Id = 1,
                             IconCSS = "fas fa-spa",
-                            Name = "Beauty"
+                            Name = "Косметика"
                         },
                         new
                         {
                             Id = 2,
                             IconCSS = "fas fa-couch",
-                            Name = "Furniture"
+                            Name = "Мебель"
                         },
                         new
                         {
                             Id = 3,
                             IconCSS = "fas fa-headphones",
-                            Name = "Electronics"
+                            Name = "Электроника"
                         },
                         new
                         {
                             Id = 4,
                             IconCSS = "fas fa-shoe-prints",
-                            Name = "Shoes"
+                            Name = "Обувь"
                         });
                 });
 
@@ -169,9 +169,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 1,
                             CategoryId = 1,
                             Count = 100,
-                            Description = "A kit provided by Glossier, containing skin care, hair care and makeup products",
+                            Description = "Набор от Glossier, содержащий средства по уходу за кожей, волосами и другую косметику",
                             ImageURL = "/Images/Beauty/Beauty1.png",
-                            Name = "Glossier - Beauty Kit",
+                            Name = "Glossier - Косметический набор",
                             RetailPrice = 100m
                         },
                         new
@@ -179,9 +179,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 2,
                             CategoryId = 1,
                             Count = 45,
-                            Description = "A kit provided by Curology, containing skin care products",
+                            Description = "Набор, предоставленный Curology, содержащий средства по уходу за кожей",
                             ImageURL = "/Images/Beauty/Beauty2.png",
-                            Name = "Curology - Skin Care Kit",
+                            Name = "Curology - Набор ухода за кожей",
                             RetailPrice = 50m
                         },
                         new
@@ -189,9 +189,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 3,
                             CategoryId = 1,
                             Count = 30,
-                            Description = "A kit provided by Curology, containing skin care products",
+                            Description = "Набор, предоставленный Curology, содержащий средства по уходу за кожей",
                             ImageURL = "/Images/Beauty/Beauty3.png",
-                            Name = "Cocooil - Organic Coconut Oil",
+                            Name = "Cocooil - Органическое Кокосовое масло",
                             RetailPrice = 20m
                         },
                         new
@@ -199,9 +199,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 4,
                             CategoryId = 1,
                             Count = 60,
-                            Description = "A kit provided by Schwarzkopf, containing skin care and hair care products",
+                            Description = "Набор от Schwarzkopf, содержащий средства по уходу за кожей и волосами",
                             ImageURL = "/Images/Beauty/Beauty4.png",
-                            Name = "Schwarzkopf - Hair Care and Skin Care Kit",
+                            Name = "Schwarzkopf - Набор для ухода за волосами и кожей",
                             RetailPrice = 50m
                         },
                         new
@@ -209,9 +209,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 5,
                             CategoryId = 1,
                             Count = 85,
-                            Description = "Skin Care Kit, containing skin care and hair care products",
+                            Description = "Набор для ухода за кожей, содержащий средства по уходу за кожей и волосами",
                             ImageURL = "/Images/Beauty/Beauty5.png",
-                            Name = "Skin Care Kit",
+                            Name = "Набор для ухода за кожей",
                             RetailPrice = 30m
                         },
                         new
@@ -219,7 +219,7 @@ namespace ShopOnline.Api.Migrations
                             Id = 6,
                             CategoryId = 3,
                             Count = 120,
-                            Description = "Air Pods - in-ear wireless headphones",
+                            Description = "Air Pods - знаменитые беспроводные наушники-вкладыши от яблочной компании",
                             ImageURL = "/Images/Electronic/Electronics1.png",
                             Name = "Air Pods",
                             RetailPrice = 100m
@@ -229,9 +229,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 7,
                             CategoryId = 3,
                             Count = 200,
-                            Description = "On-ear Golden Headphones - these headphones are not wireless",
+                            Description = "Наушники On-ear Golden - эти наушники не являются беспроводными",
                             ImageURL = "/Images/Electronic/Electronics2.png",
-                            Name = "On-ear Golden Headphones",
+                            Name = "Наушники On-ear Golden",
                             RetailPrice = 40m
                         },
                         new
@@ -239,9 +239,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 8,
                             CategoryId = 3,
                             Count = 300,
-                            Description = "On-ear Black Headphones - these headphones are not wireless",
+                            Description = "Наушники On-ear Black - эти наушники не являются беспроводными",
                             ImageURL = "/Images/Electronic/Electronics3.png",
-                            Name = "On-ear Black Headphones",
+                            Name = "Наушники On-ear Black",
                             RetailPrice = 40m
                         },
                         new
@@ -249,9 +249,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 9,
                             CategoryId = 3,
                             Count = 20,
-                            Description = "Sennheiser Digital Camera - High quality digital camera provided by Sennheiser - includes tripod",
+                            Description = "Sennheiser Цифровая камера - Высококачественная цифровая камера от Sennheiser - включает в себя штатив",
                             ImageURL = "/Images/Electronic/Electronic4.png",
-                            Name = "Sennheiser Digital Camera with Tripod",
+                            Name = "Sennheiser Цифровая камера со штативом",
                             RetailPrice = 600m
                         },
                         new
@@ -259,9 +259,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 10,
                             CategoryId = 3,
                             Count = 15,
-                            Description = "Canon Digital Camera - High quality digital camera provided by Canon",
+                            Description = "Цифровая камера Canon - Высококачественная цифровая камера, предоставляемая компанией Canon",
                             ImageURL = "/Images/Electronic/Electronic5.png",
-                            Name = "Canon Digital Camera",
+                            Name = "Цифровая камера Canon",
                             RetailPrice = 500m
                         },
                         new
@@ -269,7 +269,7 @@ namespace ShopOnline.Api.Migrations
                             Id = 11,
                             CategoryId = 3,
                             Count = 60,
-                            Description = "Gameboy - Provided by Nintendo",
+                            Description = "Gameboy - Предоставлено Nintendo",
                             ImageURL = "/Images/Electronic/technology6.png",
                             Name = "Nintendo Gameboy",
                             RetailPrice = 100m
@@ -279,9 +279,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 12,
                             CategoryId = 2,
                             Count = 212,
-                            Description = "Very comfortable black leather office chair",
+                            Description = "Очень удобное офисное кресло из черной кожи",
                             ImageURL = "/Images/Furniture/Furniture1.png",
-                            Name = "Black Leather Office Chair",
+                            Name = "Офисное Кресло Из Черной Кожи",
                             RetailPrice = 50m
                         },
                         new
@@ -289,9 +289,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 13,
                             CategoryId = 2,
                             Count = 112,
-                            Description = "Very comfortable pink leather office chair",
+                            Description = "Очень удобное офисное кресло из розовой кожи",
                             ImageURL = "/Images/Furniture/Furniture2.png",
-                            Name = "Pink Leather Office Chair",
+                            Name = "Розовое Кожаное Офисное Кресло",
                             RetailPrice = 50m
                         },
                         new
@@ -299,9 +299,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 14,
                             CategoryId = 2,
                             Count = 90,
-                            Description = "Very comfortable lounge chair",
+                            Description = "Очень удобное кресло для отдыха",
                             ImageURL = "/Images/Furniture/Furniture3.png",
-                            Name = "Lounge Chair",
+                            Name = "Кресло для отдыха",
                             RetailPrice = 70m
                         },
                         new
@@ -309,9 +309,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 15,
                             CategoryId = 2,
                             Count = 95,
-                            Description = "Very comfortable Silver lounge chair",
+                            Description = "Очень удобное серое кресло для отдыха",
                             ImageURL = "/Images/Furniture/Furniture4.png",
-                            Name = "Silver Lounge Chair",
+                            Name = "Серое Кресло Для Отдыха",
                             RetailPrice = 120m
                         },
                         new
@@ -319,9 +319,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 16,
                             CategoryId = 2,
                             Count = 100,
-                            Description = "White and blue Porcelain Table Lamp",
+                            Description = "Бело-голубая фарфоровая настольная лампа",
                             ImageURL = "/Images/Furniture/Furniture6.png",
-                            Name = "Porcelain Table Lamp",
+                            Name = "Фарфоровая настольная Лампа",
                             RetailPrice = 15m
                         },
                         new
@@ -329,9 +329,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 17,
                             CategoryId = 2,
                             Count = 73,
-                            Description = "Office Table Lamp",
+                            Description = "Офисная Настольная Лампа",
                             ImageURL = "/Images/Furniture/Furniture7.png",
-                            Name = "Office Table Lamp",
+                            Name = "Офисная Настольная Лампа",
                             RetailPrice = 20m
                         },
                         new
@@ -339,9 +339,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 18,
                             CategoryId = 4,
                             Count = 50,
-                            Description = "Comfortable Puma Sneakers in most sizes",
+                            Description = "Удобные кроссовки Puma большинства размеров",
                             ImageURL = "/Images/Shoes/Shoes1.png",
-                            Name = "Puma Sneakers",
+                            Name = "Кроссовки Puma",
                             RetailPrice = 100m
                         },
                         new
@@ -349,9 +349,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 19,
                             CategoryId = 4,
                             Count = 60,
-                            Description = "Colorful trainsers - available in most sizes",
+                            Description = "Разноцветные кеды - доступны в большинстве размеров",
                             ImageURL = "/Images/Shoes/Shoes2.png",
-                            Name = "Colorful Trainers",
+                            Name = "Разноцветные кеды",
                             RetailPrice = 150m
                         },
                         new
@@ -359,9 +359,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 20,
                             CategoryId = 4,
                             Count = 70,
-                            Description = "Blue Nike Trainers - available in most sizes",
+                            Description = "Синие кроссовки Nike - доступны в большинстве размеров",
                             ImageURL = "/Images/Shoes/Shoes3.png",
-                            Name = "Blue Nike Trainers",
+                            Name = "Синие кроссовки Nike",
                             RetailPrice = 200m
                         },
                         new
@@ -369,9 +369,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 21,
                             CategoryId = 4,
                             Count = 120,
-                            Description = "Colorful Hummel Trainers - available in most sizes",
+                            Description = "Разноцветные кеды Hummel - доступны в большинстве размеров",
                             ImageURL = "/Images/Shoes/Shoes4.png",
-                            Name = "Colorful Hummel Trainers",
+                            Name = "Разноцветные кеды Hummel",
                             RetailPrice = 120m
                         },
                         new
@@ -379,9 +379,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 22,
                             CategoryId = 4,
                             Count = 100,
-                            Description = "Red Nike Trainers - available in most sizes",
+                            Description = "Красные кроссовки Nike - доступны в большинстве размеров",
                             ImageURL = "/Images/Shoes/Shoes5.png",
-                            Name = "Red Nike Trainers",
+                            Name = "Красные кроссовки Nike",
                             RetailPrice = 200m
                         },
                         new
@@ -389,9 +389,9 @@ namespace ShopOnline.Api.Migrations
                             Id = 23,
                             CategoryId = 4,
                             Count = 150,
-                            Description = "Birkenstock Sandles - available in most sizes",
+                            Description = "Сандали Birkenstock - доступны в большинстве размеров",
                             ImageURL = "/Images/Shoes/Shoes6.png",
-                            Name = "Birkenstock Sandles",
+                            Name = "Сандали Birkenstock",
                             RetailPrice = 50m
                         });
                 });
@@ -416,12 +416,12 @@ namespace ShopOnline.Api.Migrations
                         new
                         {
                             Id = 1,
-                            UserName = "Bob"
+                            UserName = "Владимир"
                         },
                         new
                         {
                             Id = 2,
-                            UserName = "Sarah"
+                            UserName = "Светлана"
                         });
                 });
 #pragma warning restore 612, 618

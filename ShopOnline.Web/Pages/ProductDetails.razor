@@ -1,4 +1,5 @@
 ﻿@page "/product/{Id:int}"
+@using ShopOnline.DataAccess.DTOs
 
 @if(Product==null&&ErrorMessage==null)
 {
@@ -9,7 +10,7 @@ else if(ErrorMessage!=null)
     <DisplayError ErrorMessage="@ErrorMessage"></DisplayError>
 }
 else{
-    <h3 class="mb-5">Product Details</h3>
+    <h3 class="mb-5">Карточка товара</h3>
     <div class="row">
         <div class="col-md-6 mb-4">
             <img class="img-fluid" src="@Product.ImageURL">
@@ -19,9 +20,18 @@ else{
             <p class="mb-4">@Product.Description</p>
             <p class="mb-4">
                 <b>
-                    @Product.RetailPrice?.ToString("C")&nbsp;(@Product.Count items in stock)
+                    @Product.RetailPrice?.ToString("C",CultureInfo.CreateSpecificCulture("ru-RU"))&nbsp;(осталось @Product.Count шт)
                 </b>
             </p>
+            <div>
+                <button class="btn btn-success"
+                @onclick="()=>(AddToCart(new CartItemToAddDTO{
+                    CartId = MockUserForTest.CartId,
+                    ProductId = Product.Id,
+                    Count=1
+                }))"
+                ><b>Добавить</b></button>
+            </div>
         </div>
     </div>
 }

@@ -92,5 +92,47 @@ namespace ShopOnline.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<CartItemDTO>> DeleteItemFromCart(int id)
+        {
+            try
+            {
+                var cartItem = await shoppingCartRepository.DeleteItem(id);
+                if (cartItem == null)
+                {
+                    return NotFound();
+                }
+                var product = await productRepository.GetProduct(cartItem.ProductId.GetValueOrDefault());
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                var cartItemDTO = cartItem.ConvertToDTO(product);
+                return Ok(cartItemDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+        [HttpPatch("{id:int}")]
+        public async Task <ActionResult> UpdateCount(int id,CartItemCountUpdateDTO cartItemCountUpdateDTO)
+        {
+            try
+            {
+                var cartItem = await shoppingCartRepository.UpdateCount(id, cartItemCountUpdateDTO);
+                if(cartItem == null)
+                {
+                    return NotFound();
+                }
+                var product = await productRepository.GetProduct(cartItem.ProductId.GetValueOrDefault());
+                var cartItemDTO = cartItem.ConvertToDTO(product);
+                return Ok(cartItemDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@
                         @item.Name
                     </h5>
                     <p class="card-text">
-                        <b>@item.RetailPrice?.ToString("C")</b>
+                        <b>@item.RetailPrice?.ToString("C",CultureInfo.CreateSpecificCulture("ru-RU"))</b>
                     </p>
                 </div>
             </div>
